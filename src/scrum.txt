@@ -1,0 +1,17 @@
+Link do miro:
+
+- https://miro.com/app/board/uXjVMCoBqZM=/?share_link_id=664037685694
+
+[1] - FAZA WEJŚCIA NA STRONĘ:
+
+- Po wejściu na stronę użytkownik widzi "Pole ze słowem", "Literki", "Kontrolki"
+    # Aby rozpocząć grę użytkownik naciska na guzik "Start Game"
+    [1] Po rozpoczęciu gry:
+        - Losuje słowo do odgadnięcia
+        - wszystkie literki które są zostają odblokowane
+        - ustawiamy wisielca na '0'
+    + W trakcie gry gracz może:
+        - Przerwać grę
+        - Zrestartować ją
+    # 
+

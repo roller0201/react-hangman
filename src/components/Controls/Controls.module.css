@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  gap: 10px;
+  width: 50%;
+}
+
+.container button {
+  width: 100%;
+}

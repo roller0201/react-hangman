@@ -1,0 +1,40 @@
+.container {
+  /* ! POSITIONING ! */
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  /* ? DISPLAY ? */
+  gap: 5px;
+
+  font-family: "Roboto", sans-serif;
+}
+
+.keyboard {
+  /* ! POSITIONING ! */
+  display: flex;
+  /* ? DISPLAY ? */
+  list-style: none;
+  gap: 5px;
+}
+
+button {
+  /* ! POSITIONING ! */
+  background: transparent;
+  min-width: 75px;
+  min-height: 75px;
+  /* ? DISPLAY ? */
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+
+  color: white;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+button:hover {
+  /* ? DISPLAY ? */
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
