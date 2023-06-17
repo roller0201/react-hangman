@@ -34,10 +34,20 @@ export default class App extends Component {
       },
     ],
     pressedKeys: [],
+    gameStatus: "",
   };
 
+setGameStatus = (status) =>
+{
+  this.setState({
+    gameStatus: status
+  },() => console.log('value of gameState: '+this.state.gameStatus))
+}
+
+
+
   render() {
-    const { words } = this.state;
+    const { words, gameStatus } = this.state;
     return (
       <div className={style.app}>
         <Title>HANGMAN | WISIELEC</Title>
@@ -45,7 +55,10 @@ export default class App extends Component {
           /* Tutaj przekazuje words --> */
           words={words}
         />
-        <Controls />
+        <Controls
+          pressedButton={this.setGameStatus}
+          gameStatus={gameStatus}
+        />
         <Keyboard />
       </div>
     );

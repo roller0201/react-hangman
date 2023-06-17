@@ -22,8 +22,10 @@
 button {
   /* ! POSITIONING ! */
   background: transparent;
-  min-width: 75px;
-  min-height: 75px;
+  min-width: 2em;
+  width: 3em;
+  min-height: 2em;
+  height: 3em;
   /* ? DISPLAY ? */
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -37,4 +39,9 @@ button {
 button:hover {
   /* ? DISPLAY ? */
   border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+button:disabled {
+  border: 2px solid rgba(255, 255, 255, 0.101);
+  color: rgba(255, 255, 255, 0.286);
 }
