@@ -1,21 +1,26 @@
-import { Component } from "react";
-import style from "./Controls.module.css";
+import React from 'react';
+import style from './Controls.module.css';
 
-export default class Controls extends Component {
-  state = {
-    gameStatus: this.props.gameStatus,
-  };
-  setGameState = (event) => {
-    this.props.pressedButton(event.target.textContent);
-  };
-
-  render() {
-    return (
-      <div className={style.container} buttons={this.setButtonState}>
-        <button onClick={this.setGameState}>START GAME</button>
-        <button onClick={this.setGameState}>RESTART</button>
-        <button onClick={this.setGameState}>STOP</button>
+const Controls = ({
+  handleRestartGame,
+  handleStartGame,
+  handleStopGame,
+  handleReturnGame,
+  isPaused,
+}) => {
+  return (
+    <div className={style.container}>
+      <button onClick={() => handleStartGame()}>ROZPOCZNIJ GRE</button>
+      <div>
+        <button onClick={handleRestartGame}>RESTART</button>
+        {isPaused ? (
+          <button onClick={() => handleReturnGame()}>Wznów</button>
+        ) : (
+          <button onClick={() => handleStopGame(false)}>STOP</button>
+        )}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default Controls;
